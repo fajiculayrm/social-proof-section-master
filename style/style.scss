@@ -15,10 +15,13 @@ body {
     align-items: center;
     text-align: center;
     padding: 5rem 0;
+    @media (min-width: 48rem) {
+        padding: 0;
+    }
 }
 
 main {
-    width: min(90%, 96.5rem);
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -27,7 +30,8 @@ main {
         "rates"
         "reviews";
     @media (min-width: 48rem) {
-        grid-template-columns: 0.8fr 0.5fr 0.8fr;
+        width: min(70%, 62.5rem);
+        grid-template-columns: 1fr 0.5fr 1.5fr;
         grid-template-rows: auto;
         grid-template-areas:
             "banner . rates"
@@ -40,7 +44,7 @@ h1 {
     color: $highlight1;
     font-size: 2.5rem;
     @media (min-width: 48rem) {
-        font-size: 4.2rem;
+        font-size: 3.125rem;
     }
 }
 
@@ -50,7 +54,7 @@ h2 {
     font-size: 1.375rem;
     margin-top: 1.5rem;
     @media (min-width: 48rem) {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -66,7 +70,6 @@ h2 {
     @media (min-width: 48rem) {
         display: flex;
         flex-direction: column;
-        margin-top: 3rem;
     }
 }
 
@@ -86,15 +89,12 @@ h2 {
         &:nth-child(3) {
             align-self: flex-end;
         }
-        padding: 1rem 2rem;
+        padding: 1rem;
     }
 }
 
 .ratedStars h3 {
     font-size: 1rem;
-    @media (min-width: 48rem) {
-        font-size: 1.5rem;
-    }
     @media (min-width: 90rem) {
         display: inline;
         margin-right: 2rem;
@@ -116,8 +116,10 @@ h2 {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        height: 20rem;
         margin-top: 2rem;
+    }
+    @media (min-width: 90rem) {
+        height: 20rem;
     }
 }
 
@@ -163,9 +165,6 @@ h2 {
     color: $white;
     margin-top: 1rem;
     line-height: 1.2;
-    @media (min-width: 48rem) {
-        font-size: 1.3125rem;
-    }
 }
 
 .info {
